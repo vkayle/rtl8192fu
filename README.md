@@ -156,6 +156,10 @@ cd rtl8192fu/
 sudo make uninstall
 ```
 
+### 有些无线网卡存储了 Windows 系统的驱动，Linux 会认为是优盘，所以需要切换一下供应商和产品 id，从优盘变为网卡
+例如，sudo usb_modeswitch -K -v 0bda -p a192
+有些供应商和产品 id 可以在这个网页找到：http://www.linux-usb.org/usb.ids
+
 ### 对 `dkms`的支持
 
 > 每次内核更新之后，驱动都需要手动重新编译安装，可能比较麻烦。
